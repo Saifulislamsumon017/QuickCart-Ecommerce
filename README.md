@@ -1,6 +1,6 @@
 <h1 align="center">✨ Quick Cart</h1>
 <p align="center">
-A modern eCommerce platform built with Next.js 15, React 19, Tailwind CSS 4, MongoDB, and NextAuth — designed for speed, simplicity, and seamless user experience.
+A modern eCommerce web application built with Next.js 15, MongoDB, NextAuth, and TailwindCSS, designed for speed, security, and scalability. QuickCart provides a seamless shopping experience with user authentication, product management, and elegant UI.
 </p>
 
 <p align="center">

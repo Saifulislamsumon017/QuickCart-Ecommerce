@@ -12,11 +12,11 @@ const SideBar = () => {
       path: '/dashboard/add-product',
       icon: assets.add_icon,
     },
-    {
-      name: 'Product List',
-      path: '/dashboard/product-list',
-      icon: assets.product_list_icon,
-    },
+    // {
+    //   name: 'Product List',
+    //   path: '/dashboard/product-list',
+    //   icon: assets.product_list_icon,
+    // },
     // { name: 'Orders', path: '/seller/orders', icon: assets.order_icon },
   ];
 

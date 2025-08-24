@@ -12,7 +12,7 @@ const Navbar = () => {
       </Link>
       <button
         onClick={() => signOut({ callbackUrl: '/login' })}
-        className=" bg-red-500 text-white hover:bg-red-600   px-5 py-2 sm:px-7 sm:py-2 rounded-full text-xs sm:text-sm transition"
+        className="px-4 py-2 rounded-full border border-orange-600 bg-orange-600 text-white hover:bg-orange-700 transition"
       >
         Logout
       </button>

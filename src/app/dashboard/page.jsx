@@ -7,8 +7,8 @@ const ProfilePage = () => {
 
   if (!session) {
     return (
-      <div className="flex w-full justify-center items-center h-screen bg-gray-100 dark:bg-gray-900">
-        <p className="text-gray-700 dark:text-gray-200 text-lg">
+      <div className="flex w-full justify-center items-center min-h-screen bg-gray-100">
+        <p className="text-gray-700 text-lg">
           Please log in to view your profile.
         </p>
       </div>
@@ -20,10 +20,10 @@ const ProfilePage = () => {
   const role = 'User'; // Replace with dynamic role if available
 
   return (
-    <div className="flex w-full justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 px-4">
-      <div className="bg-white dark:bg-gray-800 shadow-xl rounded-3xl md:w-4/5 lg:w-3/5 overflow-hidden">
+    <div className="flex w-full justify-center items-center min-h-screen px-4 pt-10 sm:px-6  lg:px-8">
+      <div className="bg-white shadow-xl rounded-3xl w-full max-w-4xl overflow-hidden">
         {/* Cover Image */}
-        <div className="relative h-56 w-full">
+        <div className="relative h-48 sm:h-56 md:h-64 w-full">
           <img
             src={user.image}
             alt="Cover"
@@ -40,36 +40,32 @@ const ProfilePage = () => {
               alt={user.name || 'User'}
               width={120}
               height={120}
-              className="rounded-full border-4 border-white dark:border-gray-800 object-cover"
+              className="rounded-full border-4 border-white object-cover sm:w-28 sm:h-28 md:w-32 md:h-32"
             />
           </div>
 
           {/* Role Badge */}
-          <span className="mt-3 px-4 py-1 text-xs font-semibold text-white bg-lime-500 rounded-full">
+          <span className="mt-3 px-4 py-1 text-xs sm:text-sm font-semibold text-white bg-lime-500 rounded-full">
             {role.toUpperCase()}
           </span>
 
           {/* User Info */}
-          <h2 className="mt-2 text-2xl font-semibold text-gray-800 dark:text-white">
+          <h2 className="mt-2 text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800">
             {user.name || 'No Name'}
           </h2>
-          <p className="text-gray-500 dark:text-gray-300 text-sm">
-            {user.email}
-          </p>
+          <p className="text-gray-500 text-sm sm:text-base">{user.email}</p>
 
           {/* Info Cards */}
-          <div className="mt-6 w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow-sm text-center">
-              <p className="text-gray-400 dark:text-gray-300 text-sm">
-                User ID
-              </p>
-              <p className="mt-1 text-lg font-bold text-gray-800 dark:text-white">
+          <div className="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="bg-gray-50 p-4 rounded-xl shadow-sm text-center">
+              <p className="text-gray-400 text-sm">User ID</p>
+              <p className="mt-1 text-lg sm:text-xl font-bold text-gray-800">
                 {user.id || 'N/A'}
               </p>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-xl shadow-sm text-center">
-              <p className="text-gray-400 dark:text-gray-300 text-sm">Role</p>
-              <p className="mt-1 text-lg font-bold text-gray-800 dark:text-white">
+            <div className="bg-gray-50 p-4 rounded-xl shadow-sm text-center">
+              <p className="text-gray-400 text-sm">Role</p>
+              <p className="mt-1 text-lg sm:text-xl font-bold text-gray-800">
                 {role}
               </p>
             </div>
@@ -77,10 +73,10 @@ const ProfilePage = () => {
 
           {/* Action Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full justify-center">
-            <button className="flex-1 bg-lime-500 text-black py-2 px-6 rounded-xl hover:bg-lime-700 transition font-medium">
+            <button className="flex-1 bg-lime-500 text-black py-2 px-4 sm:px-6 rounded-xl hover:bg-lime-700 transition font-medium">
               Update Profile
             </button>
-            <button className="flex-1 bg-lime-500 text-black py-2 px-6 rounded-xl hover:bg-lime-700 transition font-medium">
+            <button className="flex-1 bg-lime-500 text-black py-2 px-4 sm:px-6 rounded-xl hover:bg-lime-700 transition font-medium">
               Change Password
             </button>
           </div>
@@ -89,4 +85,5 @@ const ProfilePage = () => {
     </div>
   );
 };
+
 export default ProfilePage;
