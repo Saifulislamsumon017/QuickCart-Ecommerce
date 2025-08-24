@@ -13,7 +13,7 @@ const AllProducts = async () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-start pt-15 px-6 md:px-16 lg:px-32">
+      <div className="max-w-8xl flex flex-col items-start pt-15 md:px-16 lg:px-32">
         {/* Heading */}
         <div className="flex flex-col items-end pt-12">
           <p className="text-2xl font-medium">All products</p>
