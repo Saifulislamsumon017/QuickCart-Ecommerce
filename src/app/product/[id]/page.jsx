@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
+import Spinner from '@/components/Spinner';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -31,7 +32,9 @@ const ProductDetails = () => {
       <>
         <Navbar />
         <div className="flex items-center justify-center h-96">
-          <p className="text-lg text-gray-600">Loading product...</p>
+          <p className="text-lg text-gray-600">
+            <Spinner />
+          </p>
         </div>
         <Footer />
       </>
