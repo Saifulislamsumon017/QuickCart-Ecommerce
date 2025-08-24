@@ -2,7 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['raw.githubusercontent.com'], // add your image host here
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**', // যেকোনো host
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
 

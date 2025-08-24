@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import SessionWrapper from './providers/SessionProvider';
+import { DarkModeProvider } from './providers/DarkModeProvider'; // ✅ named import
+import { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -22,7 +25,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <DarkModeProvider>
+          <SessionWrapper>{children}</SessionWrapper>
+        </DarkModeProvider>
+        <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>
   );
