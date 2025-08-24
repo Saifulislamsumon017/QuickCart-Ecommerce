@@ -73,9 +73,11 @@ const ProductCard = ({ product }) => {
         <button
           type="button"
           className="max-sm:hidden px-4 py-1.5 text-gray-500 border border-gray-500/20 rounded-full text-xs hover:bg-slate-50 transition"
-          onClick={e => e.preventDefault()}
+          // onClick={e => e.preventDefault()}
+          onClick={`/product/${product?._id ?? ''}`}
         >
-          Buy now
+          {/* Buy Now */}
+          See More
         </button>
       </div>
     </Link>

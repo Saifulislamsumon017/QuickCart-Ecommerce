@@ -42,7 +42,7 @@ const ProductDetails = () => {
     return (
       <>
         <Navbar />
-        <div className="flex items-center justify-center h-96">
+        <div className="flex items-center justify-center pt-20 h-96">
           <p className="text-lg text-gray-600">Product not found</p>
         </div>
         <Footer />
@@ -54,7 +54,7 @@ const ProductDetails = () => {
     <>
       <Navbar />
 
-      <div className="px-6 md:px-16 lg:px-32 py-12">
+      <div className="px-6 pt-25 md:px-16 lg:px-32 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left: Only One Product Image */}
           <div className="flex items-center justify-center bg-gray-100 rounded-lg p-4">
